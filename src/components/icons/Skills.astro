@@ -1,0 +1,67 @@
+---
+const skillList = [
+  {
+    name: 'HTML',
+    icon: 'https://cdn-icons-png.flaticon.com/128/569/569835.png',
+    // description: 'Building the structure of web pages with HTML.'
+  },
+  {
+    name: 'CSS',
+    icon: 'https://cdn-icons-png.flaticon.com/128/569/569798.png',
+    // description: 'Styling web pages with CSS, including Flexbox and Grid layouts.'
+  },
+  {
+    name: 'JavaScript',
+    icon: 'https://cdn-icons-png.flaticon.com/128/9199/9199613.png',
+    // description: 'Adding interactivity and logic to websites with JavaScript.'
+  },
+  {
+    name: 'React',
+    icon: 'https://cdn-icons-png.flaticon.com/128/1550/1550935.png',
+    // description: 'Building dynamic user interfaces with React.js.'
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: 'https://img.icons8.com/?size=48&id=UpSCHTwpywad&format=png',
+    // description: 'Rapidly styling web pages with utility-first Tailwind CSS.'
+  },
+  {
+    name: 'Bootstrap',
+    icon: 'https://cdn-icons-png.flaticon.com/128/9255/9255589.png',
+    // description: 'Rapidly styling web pages with utility-first Tailwind CSS.'
+  },
+  {
+    name: 'UI/UX Design',
+    icon: 'https://cdn-icons-png.flaticon.com/128/13191/13191289.png',
+    // description: 'Creating visually appealing and user-friendly interfaces.'
+  },
+  {
+    name: 'Figma',
+    icon: 'https://img.icons8.com/?size=160&id=8fJfWdNsfht8&format=png',
+    // description: 'Designing and prototyping interfaces with Figma.'
+  },
+  {
+    name: 'Photoshop',
+    icon: 'https://img.icons8.com/?size=60&id=60629&format=png',
+    // description: 'Designing and prototyping interfaces with Figma.'
+  },
+  {
+    name: 'Framer',
+    icon: 'https://d3sxshmncs10te.cloudfront.net/icon/free/svg/3031011.svg?token=eyJhbGciOiJoczI1NiIsImtpZCI6ImRlZmF1bHQifQ__.eyJpc3MiOiJkM3N4c2htbmNzMTB0ZS5jbG91ZGZyb250Lm5ldCIsImV4cCI6MTczODc3NDM1NCwicSI6bnVsbCwiaWF0IjoxNzM4NTE1MTU0fQ__.03d32e2f24ac574a54388ec8582b4a5f0fc79ec912b4c072e2c85669c21f8e47',
+    // description: 'Designing and prototyping interfaces with Figma.'
+  }
+];
+---
+
+<section class="skills py-12 px-4">
+  <!-- <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Skills</h2> -->
+  <div class="skills-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    {skillList.map((skill) => (
+      <div class="skill-card p-6 bg-gray-900  border rounded-lg shadow-md text-center hover:shadow-lg transition-shadow">
+        <img src={skill.icon} alt={skill.name} class="w-16 h-16 mx-auto mb-4 object-contain " />
+        <h3 class="text-xl font-medium text-white">{skill.name}</h3>
+        <p class="text-gray-600 mt-2">{skill.description}</p>
+      </div>
+    ))}
+  </div>
+</section>

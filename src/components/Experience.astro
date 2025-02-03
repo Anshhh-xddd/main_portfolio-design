@@ -1,0 +1,22 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCIE = [
+  {
+    date: "June 2024 to December 2024",
+    title: "Front-end web developer and UI/UX designer - Freelancer",
+    description:
+      "I designed user-friendly interfaces and improved user experience through responsive designs, leveraging React.js and Tailwind CSS to build scalable and visually appealing front-end solutions. By conducting usability testing, I gathered valuable user insights to align development with objectives. Additionally, I created prototypes and high-fidelity mockups using Figma and Adobe XD, ensuring a seamless design-to-development process. Efficient collaboration and version control were maintained using GitHub, while I prioritized cross-device compatibility and accessibility standards to deliver inclusive digital experiences..",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
